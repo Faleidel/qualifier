@@ -1,0 +1,17 @@
+I created this experiment after seeing someone using phantom types to implement some notEmpty lists.
+
+After some thinking I invented this. Its like a Maybe.
+
+With a Maybe you can do this :
+
+    [a] -> Maybe a
+
+A signature like this mean : "Give me a list of 'a' and maybe I will be able to give you an 'a' in return"
+
+With the Qualifier class the type signature become :
+
+    NotEmpty [x] -> x
+
+A signature like this mean : "Give me a not empty list of 'a' and I will be sure to give you an 'a' in return"
+
+The Qualifier class if just a generalisation of this "NotEmpty" data.
